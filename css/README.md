@@ -7,6 +7,34 @@
    </details>
 
 1. <details>
+   <summary>Что такое CSSOM?</summary>
+
+   <b>CSSOM (CSS Object Model)</b> — это программный интерфейс (API) для работы с CSS в браузере, аналогичный DOM для HTML. Он представляет стили страницы в виде дерева объектов, которое браузер использует для расчёта финального отображения элементов.
+   </details>
+
+1. <details>
+   <summary>Как проверить, поддерживает ли браузер CSS-свойство?</summary>
+
+   Через правило <b>@supports</b> в css-файле для применения стилей только при поддержке свойтва.
+   ```javascript
+   @supports (display: grid) {
+      .element {
+         display: grid;
+      }
+   }
+   ```
+
+   Или с помощью javascript <b>CSS.supports()</b>
+   ```javascript
+   if (CSS.supports('property-name', 'value')) {
+      console.log('Свойство поддерживается!');
+   } else {
+      console.log('Свойство НЕ поддерживается.');
+   }
+   ```
+   </details>
+
+1. <details>
    <summary>Что означает "каскадность"? (специфичность стилей)</summary>
 
    Каскадность - это механизм определения приоритета стилей, когда несколько CSS-правил применяются к одному элементу.
